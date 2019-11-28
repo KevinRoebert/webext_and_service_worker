@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webext webrequest and service workers test</title>
+    <script>
+        async function register() {
+            await navigator.serviceWorker.register('sw.js');
+            await navigator.serviceWorker.ready;
+            console.log('ready. reload!');
+        }
+
+        if(navigator.serviceWorker.controller) {
+            console.log("already here");
+        } else {
+            register();
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "webext webrequest and service workers test",
+    "description": "webext webrequest and service workers test",
+    "version": "1",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "permissions": [
+        "webRequest",
+        "*://*/*",
+        "webRequestBlocking",
+        "<all_urls>"
+    ]
+}
